@@ -1,0 +1,119 @@
+<div class=" terminal ">
+  <p class="terminal--header ">Last login: <span id="time"></span> on ttys000</p>
+  <p class=" terminal--prompt "></p>
+  <p class=" terminal--input ">cat aboutMe.txt</p>
+  <p class=" terminal--output "><p>I work at <a href="https://reclaimhosting.com">Reclaim Hosting</a> and am passionate about educating and empowering people who want to make cool stuff on the web.</p><p>I blog on this site, <a rel="me" href="https://social.ds106.us/@taylorjadin">post on Mastodon</a>, and <a rel="me" href="https://github.com/taylorjadin">occasionally write code</a>. You can also find links to my <a href="https://raindrop.io/jadin-taylor/public-26229943/sort=-created&perpage=30&page=0">public bookmarks</a>, my <a href="https://video.jadin.me/">Peertube site</a> for videos and streaming, and an archive of my <a href="https://slides.jadin.me/">slides and presentations</a> here.</p>
+  <p class=" terminal--prompt "></p>
+  <p class=" terminal--input "></p>
+</div>
+
+<script>
+var d = new Date();
+document.getElementById("time").innerHTML = d.toLocaleString();
+</script>
+
+<style>
+.cover-content {
+  max-width: min(var(--content-width,720px),100% - var(--gap) * 2 + 15px); 
+}
+
+.terminal a {
+    color: #F92672
+}
+
+.terminal p {
+    margin-bottom: 7px;
+}
+
+.terminal {
+    font-family: menlo,consolas,monospace;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    line-height: 20px;
+    padding: 15px;
+    background: black;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .terminal {
+          font-size: 1rem;
+    }
+  }
+
+.terminal>.terminal--input {
+    counter-increment: input
+}
+
+.terminal>.terminal--prompt:before {
+    content: "taylor@jadin.me ~";
+    color: #A6E22E
+}
+
+.terminal>.terminal--input:before {
+    content: "$ ";
+    color: white;
+}
+
+.terminal>.terminal--input:last-child:after {
+    -webkit-animation: blink 0.75s infinite;
+    -moz-animation: blink 0.75s infinite;
+    -o-animation: blink 0.75s infinite;
+    animation: blink 0.75s infinite;
+    margin-left: 5px;
+    width: 28px;
+    content: "|";
+    background: white
+}
+
+.terminal>.terminal--output.is-console:before {
+    margin-right: 10px;
+    content: ">"
+}
+
+.terminal>.terminal--output.is-not-defined:before {
+    content: "undefined";
+    color: rgba(255, 255, 255, 0.5)
+}
+
+@-webkit-keyframes blink {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes blink {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@-ms-keyframes blink {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+</style>
