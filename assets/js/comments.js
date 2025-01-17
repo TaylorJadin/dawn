@@ -627,7 +627,7 @@ object-assign
           i(
             e
               ? "Become a paid member of {{publication}} to start commenting."
-              : "Become a member of {{publication}} to start commenting."
+              : "Sign in to {{publication}} to start commenting."
           ),
           "{{publication}}",
           () => S.jsx("span", { className: "font-semibold", children: o })
@@ -651,29 +651,29 @@ object-assign
             "data-testid": "signup-button",
             style: a,
             type: "button",
-            onClick: c,
-            children: i(e && r ? "Upgrade now" : "Sign up now"),
+            onClick: m,
+            children: i(e && r ? "Upgrade now" : "Sign in"),
           }),
-          !r &&
-            S.jsxs("p", {
-              className:
-                "text-md text-center font-sans text-[rgba(0,0,0,0.4)] dark:text-[rgba(255,255,255,0.5)]",
-              children: [
-                S.jsx("span", {
-                  className: "mr-1 inline-block text-[15px]",
-                  children: i("Already a member?"),
-                }),
-                S.jsx("button", {
-                  className:
-                    "rounded-md text-sm font-semibold transition-all hover:opacity-90",
-                  "data-testid": "signin-button",
-                  style: l,
-                  type: "button",
-                  onClick: m,
-                  children: i("Sign in"),
-                }),
-              ],
-            }),
+        //   !r &&
+        //     S.jsxs("p", {
+        //       className:
+        //         "text-md text-center font-sans text-[rgba(0,0,0,0.4)] dark:text-[rgba(255,255,255,0.5)]",
+        //       children: [
+        //         S.jsx("span", {
+        //           className: "mr-1 inline-block text-[15px]",
+        //           children: i("Already a member?"),
+        //         }),
+        //         S.jsx("button", {
+        //           className:
+        //             "rounded-md text-sm font-semibold transition-all hover:opacity-90",
+        //           "data-testid": "signin-button",
+        //           style: l,
+        //           type: "button",
+        //           onClick: m,
+        //           children: i("Sign in"),
+        //         }),
+        //       ],
+        //     }),
         ],
       });
     },
